@@ -50,7 +50,6 @@ const Wishlist = loadable(() => import('./pages/account/wishlist'), {
 const PageNotFound = loadable(() => import('./pages/page-not-found'))
 
 const PageViewer = loadable(() => import('./pages/page-viewer'), {fallback})
-const ContentDetails = loadable(() => import('./pages/content-details'), {fallback})
 const ContentSearch = loadable(() => import('./pages/content-search'), {fallback})
 const Content = loadable(() => import('./pages/content'), {fallback})
 
