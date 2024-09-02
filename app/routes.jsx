@@ -23,6 +23,7 @@ import {configureRoutes} from '@salesforce/retail-react-app/app/utils/routes-uti
 const fallback = <Skeleton height="75vh" width="100%" />
 
 // Pages
+const MarketPlaceStore = loadable(() => import('./pages/marketplace'), {fallback})
 const Home = loadable(() => import('./pages/home'), {fallback})
 const Login = loadable(() => import('./pages/login'), {fallback})
 const Registration = loadable(() => import('./pages/registration'), {
@@ -47,6 +48,11 @@ const Wishlist = loadable(() => import('./pages/account/wishlist'), {
     fallback
 })
 const PageNotFound = loadable(() => import('./pages/page-not-found'))
+
+const PageViewer = loadable(() => import('./pages/page-viewer'), {fallback})
+const ContentDetails = loadable(() => import('./pages/content-details'), {fallback})
+const ContentSearch = loadable(() => import('./pages/content-search'), {fallback})
+const Content = loadable(() => import('./pages/content'), {fallback})
 
 export const routes = [
     {
@@ -111,6 +117,23 @@ export const routes = [
     {
         path: '/store-locator',
         component: StoreLocator
+    },
+    {
+        path: '/page-viewer/:pageId',
+        component: PageViewer
+    },
+    {
+        path: '/content-search',
+        component: ContentSearch
+    },
+    {
+        path: '/content/:id',
+        component: Content
+    },
+    {
+        path: '/marketplace',
+        component: MarketPlaceStore,
+        exact: true
     },
     {
         path: '*',
