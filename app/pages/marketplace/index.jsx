@@ -14,9 +14,9 @@ function MarketPlaceStore() {
     return (
         <>
             <Box data-testid="marketplace-page" layerStyle="page" textAlign="center" fontSize="xl" p={5}>
-                <VStack spacing={4}>
+                <VStack spacing={4} maxWidth="800px" mx='auto'>
                     <Heading>Shop your favorite online retailers – without using credit*.</Heading>
-                    <Text>Apply and go shopping with your approved lease amount</Text>
+                    <Text fontSize="md">Apply and go shopping with your approved lease amount</Text>
                 </VStack>
             </Box>
 
