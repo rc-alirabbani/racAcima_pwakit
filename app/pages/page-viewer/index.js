@@ -13,7 +13,9 @@ import {
     MainBanner, 
     CategoryTile, 
     StaticContent,
-    TextWithImage
+    TextWithImage,
+    CollapsibleItem,
+    TabsItem
 } from '../../page-designer/assets'
 import {
     Carousel,
@@ -24,10 +26,12 @@ import {
     MobileGrid3r1c,
     MobileGrid3r2c,
     textWidthImage,
-    
+    CollapsibleLayout,
+    TabsLayout
 } from '../../page-designer/layouts'
 
 import {HTTPError, HTTPNotFound} from '@salesforce/pwa-kit-react-sdk/ssr/universal/errors'
+
 
 const PAGEDESIGNER_TO_COMPONENT = {
     'commerce_assets.photoTile': ImageTile,
@@ -48,8 +52,13 @@ const PAGEDESIGNER_TO_COMPONENT = {
 
     'pd_assets.pdPlusStaticContent': StaticContent,
     'pd_assets.pdPlusTextWithImage': TextWithImage,
+    'pd_assets.pdPlusAccordion': CollapsibleItem,
+    'pd_assets.pdPlusTabs': TabsItem,
 
     'pd_layouts.pdPlusTextImageLayout': textWidthImage,
+    'pd_layouts.pdPlusAccordionLayout': CollapsibleLayout,
+    'pd_layouts.pdPlusTabsLayout': TabsLayout
+    
 }
 
 const PageViewer = () => {

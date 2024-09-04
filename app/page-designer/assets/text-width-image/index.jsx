@@ -12,8 +12,7 @@ import {
     Link as ChakraLink,
     Text,
     Heading,
-    HStack,
-    VStack
+    HStack
 } from '@salesforce/retail-react-app/app/components/shared/ui'
 import { Card, CardBody } from '@chakra-ui/react'
 import Link from '@salesforce/retail-react-app/app/components/link'
