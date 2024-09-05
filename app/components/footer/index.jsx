@@ -17,15 +17,11 @@ const PAGEDESIGNER_TO_COMPONENT = {
 const Footer = () => {
     
     const {data: page, error} = usePage({parameters: {pageId: 'footer'}})
-
-    console.log('Page Components: ',page);
-
     const [renderedComponents, setRenderedComponents] = useState(null);
 
     // Log to inspect the structure of the page data
     useEffect(() => {
         if (page) {
-            console.log('Page Components: ', page);
             setRenderedComponents(renderSpecificComponents(page));
         }
     }, [page]);
@@ -89,16 +85,7 @@ const Footer = () => {
                 </VStack>
 
                 <Page page={page} components={PAGEDESIGNER_TO_COMPONENT} />
-
-
-                {/* <Page pageId="footer">{renderSpecificComponents(page)}</Page> */}
             </Box>
-
-            {/* <Page pageId="footer">
-                <SimpleGrid columns={1} gridGap={4} width="100%">
-                    {renderedComponents}
-                </SimpleGrid>
-            </Page> */}
         </>
     );
 };

@@ -10,11 +10,10 @@ import {
     Box,
     Image,
     Link as ChakraLink,
-    Text,
+    Text
 } from '@salesforce/retail-react-app/app/components/shared/ui'
 import { Card, CardBody } from '@chakra-ui/react'
 import Link from '@salesforce/retail-react-app/app/components/link'
-import {isAbsoluteURL} from '@salesforce/retail-react-app/app/page-designer/utils'
 
 /**
  * Image with text component
@@ -31,10 +30,6 @@ export const CategoryTile = ({text_subline, text_headline, image, text_alignment
     const textHeading = text_headline
     const subHeading = text_subline
     const alignText = text_alignment
-    
-    // const isAbsolute = isAbsoluteURL(category)
-    // const LinkWrapper = isAbsolute ? ChakraLink : Link
-    // const linkProps = isAbsolute ? {href: category} : {to: category}
 
     return (
         <Box className={'category-tile'} w='100%' mx='auto' pt={8} px={4}>
