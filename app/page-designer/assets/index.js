@@ -8,11 +8,6 @@
 export * from './image-tile'
 export * from './image-with-text'
 export * from './product-tile'
-export * from './editorial-rich-text'
-export * from './main-banner'
-export * from './category-tile'
-export * from './static-content'
-export * from './text-width-image'
-export * from './collapsible-item'
-export * from './tab-item'
 export * from './shop-category'
+export * from './collapsible-item'
+

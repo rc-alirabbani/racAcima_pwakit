@@ -13,6 +13,5 @@ export * from './mobileGrid2r3c'
 export * from './mobileGrid3r1c'
 export * from './mobileGrid3r2c'
 export * from './MobileGrid3r2c1'
-export * from './textWidthImage'
 export * from './collapsibleLayout'
-export * from './tabsLayout'
+

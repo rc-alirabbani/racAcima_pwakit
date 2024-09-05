@@ -9,13 +9,7 @@ import {
     ImageTile,
     ImageWithText, 
     ProductTile, 
-    EditorialRichText, 
-    MainBanner, 
-    CategoryTile, 
-    StaticContent,
-    TextWithImage,
     CollapsibleItem,
-    TabsItem,
     ShopCategory
 } from '../../page-designer/assets'
 import {
@@ -27,9 +21,7 @@ import {
     MobileGrid3r1c,
     MobileGrid3r2c,
     MobileGrid3r2c1, 
-    textWidthImage,
     CollapsibleLayout,
-    TabsLayout
 } from '../../page-designer/layouts'
 
 import {HTTPError, HTTPNotFound} from '@salesforce/pwa-kit-react-sdk/ssr/universal/errors'
@@ -39,11 +31,7 @@ const PAGEDESIGNER_TO_COMPONENT = {
     'commerce_assets.photoTile': ImageTile,
     'commerce_assets.imageAndText': ImageWithText,
     'commerce_assets.productTile': ProductTile,
-    'commerce_assets.editorialRichText': EditorialRichText,
-    'commerce_assets.mainBanner': MainBanner,
     'commerce_assets.shopCategory': ShopCategory,
-
-    'assets.categorytile': CategoryTile,
 
     'commerce_layouts.carousel': Carousel,
     'commerce_layouts.mobileGrid1r1c': MobileGrid1r1c,
@@ -54,22 +42,13 @@ const PAGEDESIGNER_TO_COMPONENT = {
     'commerce_layouts.mobileGrid3r2c': MobileGrid3r2c,
     'commerce_layouts.mobileGrid3r2c1': MobileGrid3r2c1,
 
-    'pd_assets.pdPlusStaticContent': StaticContent,
-    'pd_assets.pdPlusTextWithImage': TextWithImage,
     'pd_assets.pdPlusAccordion': CollapsibleItem,
-    'pd_assets.pdPlusTabs': TabsItem,
-
-    'pd_layouts.pdPlusTextImageLayout': textWidthImage,
     'pd_layouts.pdPlusAccordionLayout': CollapsibleLayout,
-    'pd_layouts.pdPlusTabsLayout': TabsLayout
-    
 }
 
 const PageViewer = () => {
     const {pageId} = useParams()
     const {data: page, error} = usePage({parameters: {pageId}})
-
-    console.log('Page Components: ',page);
 
     if (error) {
         let ErrorClass = error.response?.status === 404 ? HTTPNotFound : HTTPError
