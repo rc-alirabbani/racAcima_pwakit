@@ -15,7 +15,8 @@ import {
     StaticContent,
     TextWithImage,
     CollapsibleItem,
-    TabsItem
+    TabsItem,
+    ShopCategory
 } from '../../page-designer/assets'
 import {
     Carousel,
@@ -25,6 +26,7 @@ import {
     MobileGrid2r3c,
     MobileGrid3r1c,
     MobileGrid3r2c,
+    MobileGrid3r2c1, 
     textWidthImage,
     CollapsibleLayout,
     TabsLayout
@@ -39,6 +41,7 @@ const PAGEDESIGNER_TO_COMPONENT = {
     'commerce_assets.productTile': ProductTile,
     'commerce_assets.editorialRichText': EditorialRichText,
     'commerce_assets.mainBanner': MainBanner,
+    'commerce_assets.shopCategory': ShopCategory,
 
     'assets.categorytile': CategoryTile,
 
@@ -49,6 +52,7 @@ const PAGEDESIGNER_TO_COMPONENT = {
     'commerce_layouts.mobileGrid2r3c': MobileGrid2r3c,
     'commerce_layouts.mobileGrid3r1c': MobileGrid3r1c,
     'commerce_layouts.mobileGrid3r2c': MobileGrid3r2c,
+    'commerce_layouts.mobileGrid3r2c1': MobileGrid3r2c1,
 
     'pd_assets.pdPlusStaticContent': StaticContent,
     'pd_assets.pdPlusTextWithImage': TextWithImage,
